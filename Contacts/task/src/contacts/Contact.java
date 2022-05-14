@@ -32,4 +32,31 @@ public class Contact {
     public String getNumber() {
         return number;
     }
+
+    static final class Builder {
+        private String name;
+        private String surname;
+        private String number;
+
+        Builder setName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        Builder setSurname(String surname) {
+            this.surname = surname;
+            return this;
+        }
+
+        Builder setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+
+        Contact build() {
+            return new Contact(name,
+                               surname,
+                               number);
+        }
+    }
 }

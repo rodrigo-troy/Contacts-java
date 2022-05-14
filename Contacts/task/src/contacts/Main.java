@@ -12,6 +12,11 @@ public class Main {
         System.out.println("Enter the number:");
         String number = scanner.next();
 
+        Contact contact = new Contact.Builder().setName(name)
+                                               .setSurname(surname)
+                                               .setNumber(number)
+                                               .build();
+
         System.out.println("A phone Book with a single record created!");
     }
 }
